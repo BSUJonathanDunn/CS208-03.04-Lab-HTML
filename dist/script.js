@@ -58,19 +58,28 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll("#todo-list li");
   const previewImg = document.getElementById("preview-img");
+  const previewCaption = document.getElementById("preview-caption");
 
   items.forEach(item => {
     item.addEventListener("mouseenter", () => {
       const imgSrc = item.getAttribute("data-img");
+      const caption = item.getAttribute("data-caption");
+
       if (imgSrc) {
         previewImg.src = imgSrc;
-        previewImg.style.display = "block";
+        /*previewImg.style.display = "block";*/
+      }
+      if (caption) {
+        previewCaption.textContent = caption;
+        previewCaption.style.display = "block";
       }
     });
 
     item.addEventListener("mouseleave", () => {
-      previewImg.style.display = "none";
-      previewImg.src = "";
+      previewImg.style.display = "block";
+      previewImg.src = "kunalogo.png";
+      previewCaption.style.display = "none";
+      previewCaption.textContent = "";
     });
   });
 });

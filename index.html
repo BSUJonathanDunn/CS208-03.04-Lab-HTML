@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html>
 
 <head>
@@ -7,27 +8,28 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
   <div class="row">
     <div class="column">
       <h1>Kuna, Idaho -- AKA Hometown, USA!</h1>
-        <section id="Location">
+        <section id="location">
           <h2>Location</h2>
             <p class="text-hover">Kuna, a part of the Boise Metro Area, is 18 miles wouthwest of Idaho's Capitol: Boise.<br>
                It is also 49 miles east of the Oregon state border.</p>
         </section>
 
-        <section id="About">
+        <section id="about">
           <h2>About</h2>
             <section id="Population">
               <h3>Population</h3>
-                <p>As of the 2020 census, Kuna has a population of 24,011 people. The U.S.&nbsp;Census&nbsp;Bureau 
+                <p>As of the 2020 census, Kuna has a population of 24,011 people. The U.S.&nbsp;Census&nbsp;Bureau<br>
                    estimated that as of 2024 the population grew to 29,127 people</p>
             </section>
 
-            <section id="Origin">
+            <section id="origin">
               <h3>Name Origin</h3>
                 <p>The origin of Kuna's name is currently debated, but it was named by the<br> 
                   Oregon Short Line Railroad in 1883 to replace the original station: Fifteen Mile Station.<br>
@@ -36,55 +38,29 @@
                   Other Indigenous tribes has suggested that Kuna is a Bannock word meaning "wood."</p>
             </section>
 
-            <section id="Age">
+            <section id="age">
               <h3>Average Age</h3>
                 <p>According to the Kuna Economic Department, the average age of Kuna's population is 30.6.</p>
             </section>
         </section>
 
-        <section>
+        <section id="toDo">
           <h2>Things To Do</h2>
-<ul id="todo-list">
-  <li data-img="winery.jpg">Enjoy some wine at the Indian Creek Winery</li>
-  <li data-img="images/golf.jpg">Shoot some golf at Falcon Crest Golf Club</li>
-  <li data-img="images/caves.jpg">Go spelunking in the Kuna Caves.</li>
-  <li data-img="images/birds.jpg">Visit the World Center for Birds of Prey</li>
-  <li data-img="images/greenbelt.jpg">Walk the Kuna Greenbelt.</li>
-</ul>
+          <p>Hover over each part of the list for pictures of each attraction!</p>
+            <ul id="todo-list">
+              <li data-img="winery.jpg" data-caption="Photo courtesy of tripadvisor.com">Enjoy some wine at the Indian Creek Winery</li>
+              <li data-img="golf.jpg" data-caption="Photo courtesy of yelp.com">Shoot some golf at Falcon Crest Golf Club</li>
+              <li data-img="caves.jpg" data-caption="Photo courtesy of kunacity.id.gov">Go spelunking in the Kuna Caves.</li>
+              <li data-img="greenbelt.jpg" data-caption="Photo courtesy of boisemom.com">Walk the Kuna Greenbelt.</li>
+            </ul> 
         </section>
-      </div>
+    </div>
 
-      <div class="column"> 
-  <img src="" alt="Things to do preview" id="preview-img" class="img-hover">
-</div>
+    <div class="imgColumn" id="preview-container"> 
+      <img src="kunalogo.png" alt="Things to do preview" id="preview-img" class="img-hover">
+      <p id="preview-caption"></p>
+    </div>
 
   </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const firstItem = document.querySelector("#todo-list li");
-  const previewImg = document.getElementById("preview-img");
-
-  if (!firstItem || !previewImg) {
-    alert("Could not find the <li> or preview <img>.");
-    return;
-  }
-
-  firstItem.addEventListener("mouseenter", () => {
-    previewImg.src = "funny.png";   // your file name here
-    previewImg.style.display = "block";
-    console.log("mouseenter triggered");
-  });
-
-  firstItem.addEventListener("mouseleave", () => {
-    previewImg.style.display = "none";
-    previewImg.src = "";
-    console.log("mouseleave triggered");
-  });
-});
-</script>
-
-
 </body>
-
 </html>

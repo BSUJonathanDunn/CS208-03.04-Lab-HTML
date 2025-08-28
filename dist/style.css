@@ -1,23 +1,36 @@
-body{
+body {
   background-color: #404040;
-  border-style: solid;
-  border-color: #F0E2C2;
   color: rgb(255,255,255);
 }
 
-.row {
-  display: flex;
+div {
+  border: solid #F0E2C2;
 }
 
-.column {
-  flex: 33.33%;
-  padding: 5px;
-}
 
 h1{
-  border-color: #d3e644;
-  border-style: dashed;
+  border-color: #5c9067;
+  border-style: ridge;
+  border-width: 10px;
+  background-color: #253d36;
   color: rgb(255,255,255);
+  text-align: center;
+}
+
+h2 {
+  padding-left: 8%;
+}
+
+h3 {
+  padding-left: 12%;
+}
+
+p {
+  padding-left: 12%;
+}
+
+ul {
+  padding-left: 14%;
 }
 
 table {
@@ -41,20 +54,75 @@ tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-.text-hover:hover + .img-hover {
-  display: block;
-}
-
 tbody tr:hover {
   background-color: #e9e9e9;
 }
 
-.img-hover { display: none; }
+/*Written to get the two div containers to line up right*/
+.row {
+  display: flex;
+}
 
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.imgColumn {
+  flex: 33.33%;
+  padding: 5px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+
+#location {
+  border: ridge #6377a4;
+  border-width: 10px;
+  background-color: #323c52;
+  padding-bottom: 10px;
+}
+
+#about {
+  border: ridge #5c9067;
+  border-width: 10px;
+  background-color: #253d36;
+  padding-bottom: 10px;
+}
+
+#toDo {
+  border: ridge #6377a4;
+  border-width: 10px;
+  background-color: #323c52;
+  padding-bottom: 10px;
+}
+
+/*.img-hover { display: none; }*/
+
+/*Stacking images and captions vertically*/
+#preview-container {
+  display: flex;           
+  flex-direction: column;  
+  align-items: center;     
+  text-align: center;  
+  border: ridge #9db091;
+  background-color: #616e58;
+  border-width: 10px;
+}
+
+/*Needed for form and default state of right column's contents*/
 #preview-img {
   max-width: 100%;
   border: 2px solid #F0E2C2;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  display: none; /* hidden until hover */
+  /*display: none; */
+  margin: 0 auto; 
+}
+
+#preview-caption {
+  color: #F0E2C2;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: none;
 }
