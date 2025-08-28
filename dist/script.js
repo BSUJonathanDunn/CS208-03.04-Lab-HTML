@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const previewImg = document.getElementById("preview-img");
 
   items.forEach(item => {
-    item.addEventListener("mouseenter", e => {
-      const imgSrc = e.target.getAttribute("data-img");
+    item.addEventListener("mouseenter", () => {
+      const imgSrc = item.getAttribute("data-img");
       if (imgSrc) {
         previewImg.src = imgSrc;
         previewImg.style.display = "block";

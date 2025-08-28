@@ -44,21 +44,47 @@
 
         <section>
           <h2>Things To Do</h2>
-            <ul id="todo-list">
-              <li data-img="dist/funny.png">Enjoy some wine at the Indian Creek Winery</li>
-              <li data-img="images/golf.jpg">Shoot some golf at Falcon Crest Golf Club</li>
-              <li data-img="images/caves.jpg">Go spelunking in the Kuna Caves.</li>
-              <li data-img="images/birds.jpg">Visit the World Center for Birds of Prey</li>
-              <li data-img="images/greenbelt.jpg">Walk the Kuna Greenbelt.</li>
-            </ul>
+<ul id="todo-list">
+  <li data-img="winery.jpg">Enjoy some wine at the Indian Creek Winery</li>
+  <li data-img="images/golf.jpg">Shoot some golf at Falcon Crest Golf Club</li>
+  <li data-img="images/caves.jpg">Go spelunking in the Kuna Caves.</li>
+  <li data-img="images/birds.jpg">Visit the World Center for Birds of Prey</li>
+  <li data-img="images/greenbelt.jpg">Walk the Kuna Greenbelt.</li>
+</ul>
         </section>
       </div>
 
       <div class="column"> 
-        <img src="" alt="Things to do preview" id="preview-img">
-      </div>
+  <img src="" alt="Things to do preview" id="preview-img" class="img-hover">
+</div>
 
   </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const firstItem = document.querySelector("#todo-list li");
+  const previewImg = document.getElementById("preview-img");
+
+  if (!firstItem || !previewImg) {
+    alert("Could not find the <li> or preview <img>.");
+    return;
+  }
+
+  firstItem.addEventListener("mouseenter", () => {
+    previewImg.src = "funny.png";   // your file name here
+    previewImg.style.display = "block";
+    console.log("mouseenter triggered");
+  });
+
+  firstItem.addEventListener("mouseleave", () => {
+    previewImg.style.display = "none";
+    previewImg.src = "";
+    console.log("mouseleave triggered");
+  });
+});
+</script>
+
+
 </body>
 
 </html>
