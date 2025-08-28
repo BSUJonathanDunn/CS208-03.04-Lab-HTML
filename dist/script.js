@@ -55,3 +55,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll("#todo-list li");
+  const previewImg = document.getElementById("preview-img");
+
+  items.forEach(item => {
+    item.addEventListener("mouseenter", e => {
+      const imgSrc = e.target.getAttribute("data-img");
+      if (imgSrc) {
+        previewImg.src = imgSrc;
+        previewImg.style.display = "block";
+      }
+    });
+
+    item.addEventListener("mouseleave", () => {
+      previewImg.style.display = "none";
+      previewImg.src = "";
+    });
+  });
+});
