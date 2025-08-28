@@ -1,66 +1,70 @@
 <!doctype html>
 
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Operation Hometown: Code Kuna</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="dist/style.css">
+  <script src="dist/script.js" defer></script>
 </head>
 
 <body>
   <div class="row">
     <div class="column">
       <h1>Kuna, Idaho -- AKA Hometown, USA!</h1>
+
         <section id="location">
           <h2>Location</h2>
-            <p class="text-hover">Kuna, a part of the Boise Metro Area, is 18 miles wouthwest of Idaho's Capitol: Boise.<br>
+            <p class="left-text">Kuna, a part of the Boise Metro Area, is 18 miles wouthwest of Idaho's Capitol: Boise.<br>
                It is also 49 miles east of the Oregon state border.</p>
         </section>
 
         <section id="about">
           <h2>About</h2>
-            <section id="Population">
+
+            <section id="population">
               <h3>Population</h3>
-                <p>As of the 2020 census, Kuna has a population of 24,011 people. The U.S.&nbsp;Census&nbsp;Bureau<br>
-                   estimated that as of 2024 the population grew to 29,127 people</p>
+                <p class="left-text">As of the 2020 census, Kuna has a population of 24,011 people.<br>
+                                     The U.S. Census Bureau estimated that as of 2024 the population grew to 29,127 people.</p>
             </section>
 
             <section id="origin">
               <h3>Name Origin</h3>
-                <p>The origin of Kuna's name is currently debated, but it was named by the<br> 
-                  Oregon Short Line Railroad in 1883 to replace the original station: Fifteen Mile Station.<br>
-                  Some theories suggest that Kuna means "end of the trail."<br>
-                  Another theory suggest that it is a Shoshone word for "green leaf, good to smoke."<br>
-                  Other Indigenous tribes has suggested that Kuna is a Bannock word meaning "wood."</p>
+                <p class="left-text">The origin of Kuna's name is currently debated, but it was named by the<br> 
+                                     Oregon Short Line Railroad in 1883 to replace the original station: Fifteen Mile Station.<br>
+                                     Some theories suggest that Kuna means "end of the trail."<br>
+                                     Another theory suggest that it is a Shoshone word for "green leaf, good to smoke."<br>
+                                     Other Indigenous tribes has suggested that Kuna is a Bannock word meaning "wood."</p>
             </section>
 
             <section id="age">
               <h3>Average Age</h3>
-                <p>According to the Kuna Economic Department, the average age of Kuna's population is 30.6.</p>
+                <p class="left-text">According to the Kuna Economic Department, the average age of Kuna's population is 30.6.</p>
             </section>
         </section>
 
-        <section id="toDo">
+        <section id="todo">
           <h2>Things To Do</h2>
-          <p>Hover over each part of the list for pictures of each attraction!</p>
+          <p class="left-text">Hover over each part of the list for pictures of each attraction!</p>
             <ul id="todo-list">
-              <li data-img="winery.jpg" data-caption="Photo courtesy of tripadvisor.com">Enjoy some wine at the Indian Creek Winery</li>
-              <li data-img="golf.jpg" data-caption="Photo courtesy of yelp.com">Shoot some golf at Falcon Crest Golf Club</li>
-              <li data-img="caves.jpg" data-caption="Photo courtesy of kunacity.id.gov">Go spelunking in the Kuna Caves.</li>
-              <li data-img="greenbelt.jpg" data-caption="Photo courtesy of boisemom.com">Walk the Kuna Greenbelt.</li>
+              <li data-img="dist/winery.jpg" data-caption="Photo courtesy of tripadvisor.com">
+                  Enjoy some wine at the Indian Creek Winery!</li>
+              <li data-img="dist/golf.jpg" data-caption="Photo courtesy of yelp.com">
+                  Shoot some golf at Falcon Crest Golf Club!</li>
+              <li data-img="dist/caves.jpg" data-caption="Photo courtesy of kunacity.id.gov">
+                  Go spelunking in the Kuna Caves!</li>
+              <li data-img="dist/greenbelt.jpg" data-caption="Photo courtesy of boisemom.com">
+                  Walk the Kuna Greenbelt!</li>
             </ul> 
         </section>
     </div>
 
-    <div class="imgColumn" id="preview-container"> 
-      <img src="kunalogo.png" alt="Things to do preview" id="preview-img" class="img-hover">
-      <p id="preview-caption"></p>
+    <div class="img-column" id="img-container"> 
+      <img src="dist/kunalogo.png" alt="Things to do preview" id="default-img">
+      <p id="img-caption">Courtesy of kunacity.id.gov</p>
     </div>
-
   </div>
 </body>
 </html>

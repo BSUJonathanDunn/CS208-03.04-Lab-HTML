@@ -55,31 +55,31 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+//Facilitates the image switching
 document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll("#todo-list li");
-  const previewImg = document.getElementById("preview-img");
-  const previewCaption = document.getElementById("preview-caption");
+  const list = document.querySelectorAll("#todo-list li");
+  const currentImg = document.getElementById("default-img");
+  const imgCaption = document.getElementById("img-caption");
 
-  items.forEach(item => {
+  list.forEach(item => {
     item.addEventListener("mouseenter", () => {
       const imgSrc = item.getAttribute("data-img");
       const caption = item.getAttribute("data-caption");
 
       if (imgSrc) {
-        previewImg.src = imgSrc;
-        /*previewImg.style.display = "block";*/
+        currentImg.src = imgSrc;
       }
       if (caption) {
-        previewCaption.textContent = caption;
-        previewCaption.style.display = "block";
+        imgCaption.textContent = caption;
+        imgCaption.style.display = "block";
       }
     });
 
     item.addEventListener("mouseleave", () => {
-      previewImg.style.display = "block";
-      previewImg.src = "kunalogo.png";
-      previewCaption.style.display = "none";
-      previewCaption.textContent = "";
+      currentImg.style.display = "block";
+      currentImg.src = "dist/kunalogo.png";
+      imgCaption.style.display = "block";
+      imgCaption.textContent = "Courtesy of kunacity.id.gov";
     });
   });
 });

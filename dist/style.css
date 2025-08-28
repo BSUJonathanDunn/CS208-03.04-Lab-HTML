@@ -7,8 +7,7 @@ div {
   border: solid #F0E2C2;
 }
 
-
-h1{
+h1 {
   border-color: #5c9067;
   border-style: ridge;
   border-width: 10px;
@@ -18,19 +17,15 @@ h1{
 }
 
 h2 {
-  padding-left: 8%;
+  padding-left: 3%;
 }
 
 h3 {
-  padding-left: 12%;
-}
-
-p {
-  padding-left: 12%;
+  padding-left: 9%;
 }
 
 ul {
-  padding-left: 14%;
+  padding-left: 11%;
 }
 
 table {
@@ -67,15 +62,27 @@ tbody tr:hover {
   flex: 33.33%;
   padding: 5px;
 }
+/**********************/
 
-.imgColumn {
+/*getting the paragraph in the left column to get a good margin
+  otherwise captions for the images would get the same margin.*/
+.left-text {
+  margin-left: 9%;
+}
+/*********************/
+
+/*make the images and looking nice in their container*/
+.img-column {
   flex: 33.33%;
   padding: 5px;
   display: flex;
   justify-content: center; 
   align-items: center;     
 }
+/**********************/
 
+/*Makes sure each section look uniform in appearance
+  and spacing. Also coloring for artistic effect.*/
 #location {
   border: ridge #6377a4;
   border-width: 10px;
@@ -90,17 +97,16 @@ tbody tr:hover {
   padding-bottom: 10px;
 }
 
-#toDo {
+#todo {
   border: ridge #6377a4;
   border-width: 10px;
   background-color: #323c52;
   padding-bottom: 10px;
 }
-
-/*.img-hover { display: none; }*/
+/***********************/
 
 /*Stacking images and captions vertically*/
-#preview-container {
+#img-container {
   display: flex;           
   flex-direction: column;  
   align-items: center;     
@@ -109,20 +115,20 @@ tbody tr:hover {
   background-color: #616e58;
   border-width: 10px;
 }
+/*******************/
 
 /*Needed for form and default state of right column's contents*/
-#preview-img {
+#default-img {
   max-width: 100%;
   border: 2px solid #F0E2C2;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  /*display: none; */
   margin: 0 auto; 
 }
 
-#preview-caption {
+#img-caption {
   color: #F0E2C2;
   font-size: 0.9em;
   margin-top: 5px;
-  display: none;
 }
+/*********************/
