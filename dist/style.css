@@ -1,3 +1,8 @@
+body{
+  background-color: #404040;
+  border-style: solid;
+  border-color: #F0E2C2;
+}
 h1{
   border-color: #d3e644;
   border-style: dashed;
