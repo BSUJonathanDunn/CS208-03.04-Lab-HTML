@@ -2,13 +2,21 @@ body{
   background-color: #404040;
   border-style: solid;
   border-color: #F0E2C2;
+  color: rgb(255,255,255);
 }
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
 h1{
   border-color: #d3e644;
   border-style: dashed;
-  color: rgb(255,255,255);
-}
-p{
   color: rgb(255,255,255);
 }
 
