@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     item.addEventListener("mouseleave", () => {
       currentImg.style.display = "block";
-      currentImg.src = "dist/kunalogo.png";
+      currentImg.src = "kunalogo.png";
       imgCaption.style.display = "block";
       imgCaption.textContent = "Courtesy of kunacity.id.gov";
     });
