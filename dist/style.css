@@ -33,6 +33,10 @@ tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
+img {
+  display: block;
+  margin-left: auto;
+}
 tbody tr:hover {
   background-color: #e9e9e9;
 }
