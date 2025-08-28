@@ -41,9 +41,12 @@ tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-img {
+.image-hover {
+  display: none;
+}
+
+.texct-hover:hover + .image-hover {
   display: block;
-  margin-left: auto;
 }
 tbody tr:hover {
   background-color: #e9e9e9;
