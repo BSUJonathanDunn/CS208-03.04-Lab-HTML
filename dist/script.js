@@ -55,16 +55,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-    const img1 = document.getElementById('img1');
-    const list1 = document.getElementById('list1');
-    
-
-    img1.onmouseover = function() {
-        img1.style.display = 'block'; // Hide the original text
-    };
-
-    img1.onmouseout = function() {
-        img1.style.display = 'none'; // Hide the original text
-    };
-
-
