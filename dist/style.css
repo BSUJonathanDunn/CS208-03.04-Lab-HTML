@@ -45,7 +45,7 @@ tbody tr:nth-child(even) {
   display: none;
 }
 
-.texct-hover:hover + .image-hover {
+.text-hover:hover + .image-hover {
   display: block;
 }
 tbody tr:hover {
