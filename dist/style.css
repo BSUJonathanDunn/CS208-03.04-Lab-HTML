@@ -41,11 +41,11 @@ tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-.image-hover {
+.img-hover {
   display: none;
 }
 
-.text-hover:hover + .image-hover {
+.text-hover:hover + .img-hover {
   display: block;
 }
 tbody tr:hover {
